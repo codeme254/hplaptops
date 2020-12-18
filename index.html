@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product landing page</title>
+</head>
+<style>
+    body{
+        font-family:monospace;
+        background: chartreuse;
+    }
+    #header{
+      margin-bottom: 3%;
+      border-bottom: 2px solid red;
+      text-align: center;
+      top:0px;
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      grid-template-columns: 80px 50px;
+      justify-content: space-between;
+      background: gold;
+      position:sticky;
+     /* padding: 2% 2% 2% 2%;*/
+      grid-template-areas: 
+      "i h h"
+      "n n n";
+      
+    }
+    #header h2{
+        font-size:50px;
+        text-align: left;
+        grid-area: h;
+        margin-top:1%;
+    }
+    #header-img{
+        width:100%;
+        grid-area: i;
+    }
+    #nav-bar{
+        display:flex;
+        flex-direction: row;
+
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-transform: capitalize;
+        text-align: center;
+        grid-area:n ;
+    }
+    
+    #video{
+        margin-left:25%;
+        width:50%;
+        margin-right:25%;
+    }
+    #form{
+        padding:2% 4% 2% 3%;
+        font-family:monospace;
+        text-align: center;
+        font-size:20px;
+        color:orangered;
+        margin-bottom:2%;
+        border-bottom: 2px solid cyan;
+        
+    }#email{
+        width:40%;
+        height:30px;
+        border:3px solid orange;
+    }
+    #submit{
+        height:30px;
+        border:3px solid rgb(70, 46, 3);
+    }
+    #features{
+        display:grid;
+        grid-template-columns:30% 30% 30%;
+        grid-template-rows:50% 50% 50%;
+        grid-gap: 2px;
+    }
+    #prices{
+        display:flex;
+        direction: row;
+        justify-content: space-around;
+        border-bottom: 5px solid black;
+    }
+    #prices div{
+        border:2px solid orange;
+        font-size:15px;
+        text-align: center;
+        padding:3% 3% 3% 3%;
+    }
+    #prices div a{
+       
+        text-decoration: none;
+        font-size:20px;
+    }
+    #prices div button{
+        border:2px solid magenta;
+        font-size:12px;
+        text-align: center;
+        padding:2% 2% 2% 2%;
+        text-decoration: none;
+        background: lime;
+        width:60%;
+    }
+    .nav-link{
+        text-decoration: none;
+        font-size: 25px;
+        border: 2px solid lightcoral;
+    }
+    #features div{
+        border:2px solid orange;
+        font-size:15px;
+        text-align: justify;
+    }
+    footer{
+        font-size: 18px;
+    }
+    h3{
+        font-size: 35px;
+        text-align:center;
+        text-decoration: underline;
+        font-style: oblique;
+    }
+    @media all and (max-width: 820px){
+        body{
+            margin:0px;
+            padding:0px;
+        }
+        #features{
+        display:flex;
+        flex-direction: column;
+        width:100%;
+        margin-right:0px;
+        margin-left: opx;
+    }
+    #features div{
+        border:2px solid orange;
+        font-size:25px;
+        text-align: justify;
+        width:auto;
+        padding: 0.5%;
+    }
+    #features div img{
+        padding-left:5%;
+    }
+    #video{
+       width:96%;
+       margin-left:2%;
+       margin-right:2%;
+    }
+    #prices{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border-bottom: 5px solid black;
+    }
+    footer{
+        font-size: 18px;
+        padding:2% 4% 0% 4%;
+        text-align: justify;
+    }
+    #submit{
+        height:50px;
+        border:3px solid rgb(70, 46, 3);
+        display:block;
+        width:100%;
+        margin-top:1%;
+        font-size:20px;
+    }
+    #email{
+        display:block;
+        width:100%;
+        height:50px;
+        border:3px solid orange;
+    }
+    #prices div{
+        border:2px solid orange;
+        font-size:25px;
+        text-align: center;
+        padding:3% 3% 3% 3%;
+    }
+    #prices div button{
+        border:2px solid magenta;
+        font-size:12px;
+        text-align: center;
+        padding:2% 2% 2% 2%;
+        text-decoration: none;
+        background: lime;
+        width:60%;
+    }
+    }
+    /*nav bar should always be at the top of the viewport*/
+    /*at least one media query*/
+    /*flexbox at least once*/
+</style>
+<body>
+    <header id="header">
+        <div>
+            <img src="logo.jfif" id="header-img" alt="logo of HP laptops">
+        </div>
+        <h2>HP ORIGINAL LAPTOPS</h2>
+        <!--<div>-->
+            <nav id="nav-bar">
+                <a href="#order" class="nav-link">Order now</a>
+                <a href="#feat" class="nav-link">features</a>
+                <a href="#work" class="nav-link">working</a>
+                <a href="#price" class="nav-link">prices</a>
+            </nav>
+       <!-- </div>-->
+    </header>   
+    <main>
+       <section>
+            <form action="https://www.freecodecamp.com/email-submit" id="form">
+                <h3 id="order">Request for a laptop today</h3>
+                <h4>Get started by giving us your email</h4>
+                <label for="email">Enter your email address:</label>
+                <input type="email" placeholder="Your Email Adress" id="email">
+                <button type="submit" id="submit">Request</button>
+            </form>
+        </section>
+        <h3 id="feat">Features</h3>
+        <section id="features">
+            <div>
+                <img src="widescreen.png">
+                <p>Wide screens perfect for all simulations and drawing projects, and if you are a gamer, we believe that we got you covered with this feature to.</p>
+            </div>
+            <div>
+                <img src="durability.jpg">
+                <p>Very durable laptops, perfect for all outdoor activities including field researchs and field works.</p>
+            </div>
+            <div>
+                <img src="storage.png">
+                <p>Very huge storage capacity, perfect for storage of large volumes of data, no need to upgrade storages once you purchase our HP laptops as we got you covered in this with our device's large storage capacity.</p>
+            </div>
+            <div>
+                <img src="warranty.jpg">
+                <p>Despite the durability of our laptops, we give you upto 5 years of warranty depending on the laptop purchased. We really got you covered.</p>
+            </div>
+            <div>
+                <img src="charging.jpg">
+                <p>Long battery life, can stay upto 4 days with power upon full charge, perfect if you are going for field works and you maybe don't know the power status of where you are going.</p>
+            </div>
+            <div>
+                <img src="in-a-bag.jpg">
+                <p>All peripherals are given upon purchase including a free laptop bag, earphones, charger, anti-glare glasses and more.</p>
+            </div>
+        </section><br><br>
+        <h3 id="work">How It Works</h3>
+        <section>
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/ji6Ebk0T-iE" frameborder="0"></iframe>
+        </section><br><br>
+        <h3 id="price">Prices</h3>
+        <section id="prices">
+            <div>
+                <img src="lap1.jpg">
+                <h4>HP model1</h4>
+                <h5>400$</h5>
+                <h5>Upto 2 years warranty</h5>
+                <button><a href="#order">Request Now</a></button>
+            </div>
+            <div>
+                <img src="lap2.jpg">
+                <h4>HP model2</h4>
+                <h5>600$</h5>
+                <h5>Upto 3 years warranty</h5>
+                <button><a href="#order">Request Now</a></button>
+            </div>
+            <div>
+                <img src="lap3.jpg">
+                <h4>HP model3</h4>
+                <h5>900$</h5>
+                <h5>Upto 5 years warranty</h5>
+                <button><a href="#order">Request Now</a></button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h5>DISCLAIMER</h5><p>This is not original HP page, this was just a project by a freecodecamp student, please don't submit any data to this page, and if there are any copyright or private issues violated on the HP product, I will be willing to discuss them peacefully and even delete this page if forced to.</p>
+    </footer>
+
+</body>
+</html>
